@@ -1,5 +1,6 @@
 .wrapper {
     display: flex;
+    height: 400px;
 }
 #mynetwork {
     flex: 1;
