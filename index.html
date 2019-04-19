@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>VisJS Network Minimap</title>
+    <link href="css/default.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis-network.min.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="wrapper">
+        <div id="mynetwork"></div>
+        <div id="minimapWrapper"
+            style="position: absolute; margin: 5px; border: 1px solid #ddd; overflow: hidden; background-color: #FFF; z-index: 9;"
+            class="minimapWrapperIdle">
+            <img id="minimapImage" class="minimapImage" />
+            <div id="minimapRadar" class="minimapRadar"></div>
+        </div>
+    </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis-network.min.js"></script>
+<script src="js/minimap.js"></script>
+
+</html>
