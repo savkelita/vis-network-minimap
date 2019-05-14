@@ -1,6 +1,11 @@
+/*
+    For responsive styles,
+    play around with wrapper class ( width, height ).
+*/
 .wrapper {
     display: flex;
-    height: 400px;
+    width: 1024px;
+    height: 768px;
 }
 #mynetwork {
     flex: 1;
