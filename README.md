@@ -3,9 +3,9 @@
 This is a basic implementation of minimap.
 
 #### Example ( Pure JS )
-[Minimap - Codepen (Fixed size)](https://codepen.io/savkelita/pen/XwNgXE)
+[Minimap Codepen](https://codepen.io/savkelita/pen/XwNgXE) - Fixed Size
 
-[Responsive Minimap - JSFiddle (Responsive)](https://jsfiddle.net/savke/m476zwns/)
+[Minimap JSFiddle](https://jsfiddle.net/savke/m476zwns/) - Responsive
 
 #### What is Vis ?
 Vis.js is a dynamic, browser based visualization library. The library is designed to be easy to use, handle large amounts of dynamic data, and enable manipulation of the data. [https://github.com/almende/vis](https://github.com/almende/vis)
