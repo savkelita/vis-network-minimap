@@ -3,15 +3,14 @@
 This is a basic implementation of minimap.
 
 #### Example ( Pure JS )
-[Minimap Codepen](https://codepen.io/savkelita/pen/XwNgXE) - Fixed Size
-
-[Minimap JSFiddle](https://jsfiddle.net/savke/m476zwns/) - Responsive
+- [Minimap Codepen](https://codepen.io/savkelita/pen/XwNgXE) - Fixed Size
+- [Minimap JSFiddle](https://jsfiddle.net/savke/m476zwns/) - Responsive
 
 #### What is Vis ?
-Vis.js is a dynamic, browser based visualization library. The library is designed to be easy to use, handle large amounts of dynamic data, and enable manipulation of the data. [https://github.com/almende/vis](https://github.com/almende/vis)
+**Vis.js** is a dynamic, browser based visualization library. The library is designed to be easy to use, handle large amounts of dynamic data, and enable manipulation of the data. [https://github.com/almende/vis](https://github.com/almende/vis)
 
 #### Todo:
-Dragging network trought Minimap.
+- [ ] Dragging network trought Minimap.
 
 **NOTE:**
 
