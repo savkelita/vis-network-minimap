@@ -2,6 +2,8 @@
 
 This is a basic implementation of minimap.
 
+![](https://media.giphy.com/media/gF320ZuMCa1BDOgkY0/giphy.gif)
+
 #### Example ( Pure JS )
 - [Minimap Codepen](https://codepen.io/savkelita/pen/XwNgXE) - Fixed Size
 - [Minimap JSFiddle](https://jsfiddle.net/savke/m476zwns/) - Responsive
