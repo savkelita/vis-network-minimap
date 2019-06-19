@@ -296,7 +296,7 @@ const options = {
     },
   },
   interaction: {
-    dragNodes: false,
+    dragNodes: true,
   },
 };
 const network = new vis.Network(container, data, options);
@@ -389,14 +389,18 @@ network.on('resize', () => {
   network.fit();
 })
 network.on('dragStart', () => {
+  if (network.getSelectedNodes().length === 0) {
   const minimapWrapper = document.getElementById('minimapWrapper');
   minimapWrapper.classList.remove('minimapWrapperIdle');
   minimapWrapper.classList.add('minimapWrapperMove');
+  }
 })
 network.on('dragEnd', () => {
+if (network.getSelectedNodes().length === 0) {
   const minimapWrapper = document.getElementById('minimapWrapper');
   minimapWrapper.classList.remove('minimapWrapperMove');
   minimapWrapper.classList.add('minimapWrapperIdle')
+  }
 })
 network.on('zoom', () => {
   const minimapWrapper = document.getElementById('minimapWrapper');
