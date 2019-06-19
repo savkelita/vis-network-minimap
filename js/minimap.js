@@ -357,31 +357,9 @@ const drawRadar = () => {
 }
 
 network.on('afterDrawing', () => {
-  const {
-    clientWidth,
-    clientHeight
-  } = network.body.container;
-  const width = Math.round(clientWidth / ratio);
-  const height = Math.round(clientHeight / ratio);
-  const minimapImage = document.getElementById('minimapImage');
-  const minimapWrapper = document.getElementById('minimapWrapper');
-  // Initial render
-  if (!minimapImage.hasAttribute('src') || minimapImage.src === '') {
-    if (!minimapWrapper.style.width || !minimapWrapper.style.height) {
-      drawMinimapWrapper();
-    }
+    drawMinimapWrapper();
     drawMinimapImage();
     drawRadar();
-  } else if (
-    minimapWrapper.style.width !== `${width}px` ||
-    minimapWrapper.style.height !== `${height}px`
-  ) {
-    minimapImage.removeAttribute('src');
-    drawMinimapWrapper();
-    network.fit();
-  } else {
-    drawRadar();
-  }
 })
 
 // Extra settings and cool effects :)
