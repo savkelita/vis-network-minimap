@@ -380,6 +380,7 @@ network.on('afterDrawing', () => {
     drawMinimapWrapper();
     network.fit();
   } else {
+    drawMinimapImage();
     drawRadar();
   }
 })
