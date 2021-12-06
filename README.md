@@ -12,11 +12,11 @@ This is a basic implementation of minimap.
 **Vis.js** is a dynamic, browser based visualization library. The library is designed to be easy to use, handle large amounts of dynamic data, and enable manipulation of the data. [https://github.com/almende/vis](https://github.com/almende/vis)
 
 #### Todo:
-- [ ] Dragging network trought Minimap.
+- [ ] Control Vis Network trough Minimap.
 
 **NOTE:**
 
-At the moment minimap doesn't work if `dragNodes` is enabled inside options.
+Currently Minimap doesn't support `dragNodes` option. You need to turn it off:
 
 ```
 const options = {
