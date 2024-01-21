@@ -424,5 +424,5 @@ document.getElementById('minimapWrapper').onmousemove = function(e) {
 }
 
 document.getElementById('minimapWrapper').onmouseup = function(e) {
-  undimMinimap();
+  dimMinimap();
 }
