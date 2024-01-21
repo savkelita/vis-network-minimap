@@ -416,8 +416,6 @@ document.getElementById('minimapWrapper').onmousemove = function(e) {
   if(event.buttons == 1) {
     e.preventDefault()
     undimMinimap();
-
-    const minimapRadar = document.getElementById('minimapRadar')
     var rect = document.getElementById('minimapWrapper').getBoundingClientRect();
     var x = (e.clientX - rect.left - rect.width / 2) * ratio / targetScale;
     var y = (e.clientY - rect.top - rect.height / 2) * ratio / targetScale;
