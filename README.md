@@ -2,7 +2,7 @@
 
 This is a basic implementation of minimap.
 
-[![S0XE8.gif](https://s13.gifyu.com/images/S0XE8.gif)](https://gifyu.com/image/S0XE8)
+![](https://s13.gifyu.com/images/S0XE8.gif)
 
 #### Example ( Pure JS )
 - [Minimap Codepen](https://codepen.io/savkelita/pen/XwNgXE) - Fixed Size
@@ -12,7 +12,7 @@ This is a basic implementation of minimap.
 **Vis.js** is a dynamic, browser based visualization library. The library is designed to be easy to use, handle large amounts of dynamic data, and enable manipulation of the data. [https://github.com/almende/vis](https://github.com/almende/vis)
 
 #### Panning support:
-Thanks to [Aleksey Boev](https://github.com/aboev) now we can control network trough minimap. 🎉
+Thanks to [Aleksey Boev](https://github.com/aboev) now we can control network through minimap. 🎉
 
 **_Important note_:**
 
