@@ -2,7 +2,7 @@
 
 This is a basic implementation of minimap.
 
-![](https://media.giphy.com/media/gF320ZuMCa1BDOgkY0/giphy.gif)
+[![S0XE8.gif](https://s13.gifyu.com/images/S0XE8.gif)](https://gifyu.com/image/S0XE8)
 
 #### Example ( Pure JS )
 - [Minimap Codepen](https://codepen.io/savkelita/pen/XwNgXE) - Fixed Size
@@ -11,10 +11,10 @@ This is a basic implementation of minimap.
 #### What is Vis ?
 **Vis.js** is a dynamic, browser based visualization library. The library is designed to be easy to use, handle large amounts of dynamic data, and enable manipulation of the data. [https://github.com/almende/vis](https://github.com/almende/vis)
 
-#### Todo:
-- [ ] Control Vis Network trough Minimap.
+#### Panning support:
+Thanks to [Aleksey Boev](https://github.com/aboev) now we can control network trough minimap. 🎉
 
-**NOTE:**
+**_Important note_:**
 
 Currently Minimap doesn't support `dragNodes` option. You need to turn it off:
 
