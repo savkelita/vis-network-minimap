@@ -338,6 +338,8 @@ const drawMinimapImage = () => {
   }
 }
 
+var targetScale;
+
 // Draw minimap Radar
 const drawRadar = () => {
   const {
@@ -345,9 +347,6 @@ const drawRadar = () => {
     clientHeight
   } = network.body.container
   const minimapRadar = document.getElementById('minimapRadar')
-  const {
-    targetScale
-  } = network.view
   const scale = network.getScale()
   const translate = network.getViewPosition()
   minimapRadar.style.transform = `translate(${(translate.x / ratio) *
@@ -372,6 +371,7 @@ network.on('afterDrawing', () => {
     }
     drawMinimapImage();
     drawRadar();
+    targetScale = network.view.targetScale;
   } else if (
     minimapWrapper.style.width !== `${width}px` ||
     minimapWrapper.style.height !== `${height}px`
@@ -385,21 +385,44 @@ network.on('afterDrawing', () => {
 })
 
 // Extra settings and cool effects :)
+
+function dimMinimap() {
+  const minimapWrapper = document.getElementById('minimapWrapper');
+  minimapWrapper.classList.remove('minimapWrapperMove');
+  minimapWrapper.classList.add('minimapWrapperIdle');
+}
+
+function undimMinimap() {
+  const minimapWrapper = document.getElementById('minimapWrapper');
+  minimapWrapper.classList.remove('minimapWrapperIdle');
+  minimapWrapper.classList.add('minimapWrapperMove');
+}
+
 network.on('resize', () => {
   network.fit();
 })
 network.on('dragStart', () => {
-  const minimapWrapper = document.getElementById('minimapWrapper');
-  minimapWrapper.classList.remove('minimapWrapperIdle');
-  minimapWrapper.classList.add('minimapWrapperMove');
+  undimMinimap();
 })
 network.on('dragEnd', () => {
-  const minimapWrapper = document.getElementById('minimapWrapper');
-  minimapWrapper.classList.remove('minimapWrapperMove');
-  minimapWrapper.classList.add('minimapWrapperIdle')
+  dimMinimap();
 })
 network.on('zoom', () => {
-  const minimapWrapper = document.getElementById('minimapWrapper');
-  minimapWrapper.classList.remove('minimapWrapperIdle');
-  minimapWrapper.classList.add('minimapWrapperMove')
+  undimMinimap();
 })
+
+// Minimap pan handler
+document.getElementById('minimapWrapper').onmousemove = function(e) {
+  if(event.buttons == 1) {
+    e.preventDefault()
+    undimMinimap();
+    var rect = document.getElementById('minimapWrapper').getBoundingClientRect();
+    var x = (e.clientX - rect.left - rect.width / 2) * ratio / targetScale;
+    var y = (e.clientY - rect.top - rect.height / 2) * ratio / targetScale;
+    network.moveTo({'position': {'x': x, 'y': y}});
+  }
+}
+
+document.getElementById('minimapWrapper').onmouseup = function(e) {
+  dimMinimap();
+}
